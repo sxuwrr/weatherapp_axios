@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather for <%= weather.name %></title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+    <div class="main-container">
+    <img class="weather-img" src="/season.png" alt="">
+    <h1 class="animate__animated animate__bounce">Weather for <%= weather.name %></h1>
+    <p>Temperature: <%= (weather.main.temp - 273.15).toFixed(2) %> &deg;C</p>
+    <p>Weather: <%= weather.weather[0].description %></p>
+    <p>Wind Speed: <%= weather.wind.speed %> m/s</p>
+    <p>Wind Direction: <%= weather.wind.deg %>°</p>
+    <a href="/">Check another city</a>
+    </div>
+</body>
+</html>
